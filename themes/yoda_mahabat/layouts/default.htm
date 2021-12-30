@@ -1,0 +1,107 @@
+description = "default"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/main.css'|theme }}">
+    <title>Yoda</title>
+</head>
+
+<body>
+
+{% partial 'header' %}
+
+{% page %}
+
+{% partial 'footer' %}
+
+
+<!-- <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js"></script> -->
+    
+    <script src="{{ ['assets/js/jquery.js','assets/js/slick.min.js','assets/js/slider.js','assets/js/wow.min.js','assets/js/jquery.fancybox.min.js','assets/js/main.js']|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+    <script>
+        var mediaVideo = $("project_video").get(0);
+
+        $("a.play_btn-2").click(function (e) {
+            $(".play_btn-2").fadeOut(300);
+            $(".project_box-item-info-2").fadeOut(300);
+            $(".project_box-item-2").addClass("played");
+
+            $('.about_youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' +
+                '","args":""}', '*');
+
+            var elem = $(this);
+            var iframe = $("#iframe-1")
+            elem.next().find('.project_video').trigger('play');
+            elem.next().find('.project_video').attr("controls", "controls");
+
+
+        });
+
+
+        $(".play_btn").click(function (e) {
+            $(".play_btn").fadeOut(300);
+            $(".project_box-item-info").fadeOut(300);
+            $(".project_box-item").addClass("played");
+
+            var elem = $(this);
+            elem.next().find('.project_video').trigger('play');
+            elem.next().find('.project_video').attr("controls", "controls");
+
+
+            elem.next().find('.youtube-video')[0].contentWindow.postMessage('{"event":"command","func":"' +
+                'playVideo' + '","args":""}', '*');
+        });
+
+        $(".slick-arrow").click(function (e) {
+            $(".play_btn").fadeIn(300);
+            $(".project_box-item-info").fadeIn(100);
+            $(".project_box-item").removeClass("played");
+
+            var elem = $(this);
+
+            var elements = document.querySelectorAll('.youtube-video');
+
+            elements.forEach((element) => {
+                element.contentWindow.postMessage(
+                    '{"event":"command","func":"' + 'pauseVideo' +
+                    '","args":""}', '*');
+            })
+
+        })
+
+        $('.project_video').on('ended', function () {
+            $(".project_video").trigger('pause');
+            $('.project_video').get(0).currentTime = 0;
+            $('.project_video')[0].load();
+            $(".project_video").removeAttr("controls", "controls");
+            $(".play_btn").fadeIn(300);
+            $(".project_box-item-info").fadeIn(100);
+            $(".project_box-item").removeClass("played");
+        })
+
+        $('.project_box').on('afterChange', function (event, slick, currentSlide, nextSlide) {
+            $('.project_box-item').find('.project_video').trigger('pause');
+
+
+            if (!$('.project_box-item').hasClass('slick-current')) {
+                $('.project_box-item').find('.project_video').trigger('pause');
+            }
+        });
+    </script>
+</body>
+
+</html>

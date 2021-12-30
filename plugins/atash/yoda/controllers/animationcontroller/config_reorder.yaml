@@ -1,0 +1,4 @@
+title: AnimationController
+modelClass: Atash\Yoda\Models\Animation
+toolbar:
+    buttons: reorder_toolbar

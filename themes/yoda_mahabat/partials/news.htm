@@ -1,0 +1,51 @@
+description = "news"
+==
+<?php
+use Atash\Yoda\Models\News;
+
+function onStart()
+{
+    $this['data'] = News::orderBy('id', 'asc')->get();
+}
+?>
+==
+<section class="news">
+        <div class="auto_container">
+            <div class="news_wrap">
+                <div class="box_wrap right">
+                    <div class="box_wrap-inner">
+                        <p class="box_wrap-suptitle">
+                            Täzeliklere göz aýlaň
+                        </p>
+                        <h1 class="box_wrap-title">
+                            Soňky täzelikler
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="news_box">
+
+                    {% for post in data %}
+                    <div class="news_box-item">
+                        <div class="news_box-item-photo">
+                            <img src="/storage/app/media/{{ post.image }}" alt="news-photo">
+                        </div>
+
+                        <div class="news_box-item-info">
+                            <h2 class="news_box-item-info-title">
+                                {{ post.title }}
+                            </h2>
+                            <!-- <p class="news_box-item-info-text">
+                                {{ post.text|truncate(180) }}
+                            </p> -->
+                            <a href="{{ 'post'|page({ post_id: post.id }) }}" class="news_box-item-info-link">
+                                Giňişleýin
+                            </a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- News section end ==================== -->

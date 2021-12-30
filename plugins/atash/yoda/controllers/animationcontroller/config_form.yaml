@@ -1,0 +1,10 @@
+name: AnimationController
+form: $/atash/yoda/models/animation/fields.yaml
+modelClass: Atash\Yoda\Models\Animation
+defaultRedirect: atash/yoda/animationcontroller
+create:
+    redirect: 'atash/yoda/animationcontroller/update/:id'
+    redirectClose: atash/yoda/animationcontroller
+update:
+    redirect: atash/yoda/animationcontroller
+    redirectClose: atash/yoda/animationcontroller

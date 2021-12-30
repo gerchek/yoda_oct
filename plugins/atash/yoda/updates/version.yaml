@@ -1,0 +1,26 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table atash_yoda_video'
+    - builder_table_create_atash_yoda_video.php
+1.0.3:
+    - 'Created table atash_yoda_service'
+    - builder_table_create_atash_yoda_service.php
+1.0.4:
+    - 'Created table atash_yoda_project'
+    - builder_table_create_atash_yoda_project.php
+1.0.5:
+    - 'Created table atash_yoda_animation'
+    - builder_table_create_atash_yoda_animation.php
+1.0.6:
+    - 'Created table atash_yoda_banner'
+    - builder_table_create_atash_yoda_banner.php
+1.0.7:
+    - 'Created table atash_yoda_news'
+    - builder_table_create_atash_yoda_news.php
+1.0.8:
+    - 'Created table atash_yoda_client'
+    - builder_table_create_atash_yoda_client.php
+1.0.9:
+    - 'Updated table atash_yoda_client'
+    - builder_table_update_atash_yoda_client.php

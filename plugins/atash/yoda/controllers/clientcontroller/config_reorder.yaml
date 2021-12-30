@@ -1,0 +1,4 @@
+title: ClientController
+modelClass: Atash\Yoda\Models\Client
+toolbar:
+    buttons: reorder_toolbar

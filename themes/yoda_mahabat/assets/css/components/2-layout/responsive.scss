@@ -1,0 +1,974 @@
+@include xlg-xxlg {
+
+    // Hero ===================================
+    .hero {
+        &_slider {
+            &-item {
+                &-info {
+                    &-title {
+                        font-size: 24px;
+                    }
+                }
+
+                &-img {
+                    height: 900px;
+                }
+            }
+        }
+    }
+
+    // Box Title ===========================
+    .box_wrap {
+        &-title {
+            font-size: 40px;
+        }
+    }
+
+    // Project ===============================
+    .project {
+        &_box {
+            min-height: 670px;
+
+            &-item {
+                &.slick-current {
+                    height: 630px !important;
+                }
+            }
+        }
+    }
+
+    // News ==================================
+    .news {
+        &_box {
+            &-item {
+                &-photo {
+                    height: 350px;
+                }
+            }
+        }
+    }
+}
+
+@include lg-xxlg {
+
+    // Header ========================
+    .header {
+        &_wrap {
+            .logo {
+                width: 100px;
+                height: 65px;
+            }
+        }
+
+        &.p-head {
+            padding-bottom: 240px;
+
+            &::after {
+                width: 300px;
+                height: 300px;
+                bottom: -30px;
+            }
+
+            &::before {
+                width: 170px;
+                height: 170px;
+            }
+        }
+    }
+
+    // Hero ===================================
+    .hero {
+        &_slider {
+            &-item {
+
+                &-img {
+                    height: 700px;
+                }
+            }
+        }
+    }
+
+    // Service ===========================
+    .service {
+        .about_video {
+            .project_box-item-2 {
+                height: 550px !important;
+            }
+        }
+    }
+
+    // Box Title ===========================
+    .box_wrap {
+        &-title {
+            font-size: 40px;
+        }
+    }
+
+    // Project ===============================
+    .project {
+        &_box {
+            min-height: unset !important;
+
+            &-item {
+                margin: 0 20px;
+
+                &.slick-current {
+                    height: 550px !important;
+                }
+            }
+        }
+    }
+
+    // News ==================================
+    .news {
+        &_box {
+            &-item {
+                &-photo {
+                    height: 300px;
+                }
+            }
+        }
+    }
+
+    // Clients ===============================
+    .client {
+        &_box {
+            &-item {
+                width: calc(25% - 42px);
+            }
+        }
+    }
+
+    // Footer =========================
+    .footer {
+        &_wrap {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    // Post ===========================
+    .post {
+        &_info {
+            &-photo {
+                height: 520px;
+            }
+        }
+    }
+}
+
+@include lg-xlg {
+
+    .auto_container {
+        padding: 0 35px;
+    }
+
+    // Header ==============================
+    .header {
+        &_wrap {
+            .burger {
+                display: block;
+                cursor: pointer;
+                position: relative;
+                width: 25px;
+                height: 20px;
+
+                span {
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    @include transformY;
+                    display: block;
+                    width: 15px;
+                    height: 2px;
+                    background: #fff;
+
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        top: -10px;
+                        right: 0;
+                        width: 25px;
+                        height: 2px;
+                        background: #fff;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: -10px;
+                        right: 0;
+                        width: 25px;
+                        height: 2px;
+                        background: #fff;
+                    }
+                }
+            }
+        }
+
+        .navs {
+            position: fixed;
+            top: 0;
+            right: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, .5);
+            z-index: 50;
+            @include transition;
+
+            &.active {
+                right: 0;
+            }
+
+            &_list {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 70%;
+                height: calc(100% - 100px);
+                background: #fff;
+
+                flex-direction: column;
+                -ms-flex-direction: column;
+                -moz-flex-direction: column;
+                -webkit-flex-direction: column;
+                -o-flex-direction: column;
+                padding-top: 100px;
+                @include transition;
+                border-radius: 15px 0 0 15px;
+
+                &.active {
+                    right: -2px;
+                }
+
+                li {
+                    margin-right: 0;
+                    width: 100%;
+                    text-align: center;
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:last-child {
+                        margin-top: 20px;
+                    }
+                }
+
+                &-link {
+                    color: #000;
+                    display: block;
+                    font-size: 20px;
+                    padding: 30px 0;
+                    width: 100%;
+                    text-align: center;
+
+                    &::after {
+                        display: none;
+                    }
+
+                    &:hover {
+                        background: #cecece;
+                    }
+
+                    &:last-child {
+                        &:hover {
+                            background: transparent;
+                        }
+                    }
+                }
+            }
+        }
+
+        .lang_box {
+            background: #000;
+            padding: 12px 45px;
+
+            .drop_lang {
+                &-item {
+                    padding: 10px 15px;
+                }
+            }
+        }
+    }
+
+    // Hero ===================================
+    .hero {
+        &_slider {
+            &-item {
+                &-info {
+                    &-inner {
+                        &::before {
+                            top: -65px;
+                            left: -65px;
+                        }
+
+                        &::after {
+                            bottom: -65px;
+                            right: -65px;
+                        }
+                    }
+                }
+
+                &-img {
+                    height: 800px;
+                }
+            }
+
+            .slick-next,
+            .slick-prev {
+                display: none !important;
+            }
+        }
+    }
+
+    // Box Title ===========================
+    .box_wrap {
+        &-title {
+            font-size: 34px;
+        }
+    }
+
+    // Service =================================
+    .service {
+        &_box {
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            justify-content: center;
+
+            &-item {
+                width: calc(50% - 122px);
+                margin-bottom: 100px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+
+    // Project ===============================
+    .project {
+        &_box {
+            min-height: 490px;
+
+            &-item {
+                height: 270px !important;
+                margin: 0 20px;
+
+                &.slick-current {
+                    height: 450px !important;
+                }
+            }
+
+            .slick-next,
+            .slick-prev {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -30px;
+            }
+        }
+    }
+
+    // Banner =================================
+    .banner {
+        &_box {
+            padding-bottom: 40px;
+
+            .slick-next {
+                right: 43%;
+                bottom: -40px;
+                top: unset;
+                transform: translate(0, 0);
+            }
+
+            .slick-prev {
+                left: 43%;
+                bottom: -40px;
+                top: unset;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    // News ==================================
+    .news {
+        &_box {
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+
+            &-item {
+                width: calc(50% - 40px);
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-photo {
+                    height: 270px;
+                }
+            }
+        }
+    }
+}
+
+@include lg-lg {
+
+    // Hedaer ==========================
+    .header {
+        .logo {
+            width: 65px;
+            height: 45px;
+        }
+
+        &_wrap {
+            .burger {
+                span {
+                    width: 10px;
+
+                    &::before,
+                    &::after {
+                        width: 20px;
+                    }
+                }
+            }
+        }
+
+        &.stick {
+            .logo {
+                width: 65px;
+                height: 45px;
+            }
+        }
+
+        &.p-head {
+            &::after {
+                width: 180px;
+                height: 180px;
+                bottom: 30px;
+            }
+
+            &::before {
+                width: 120px;
+                height: 120px;
+                bottom: 150px;
+                left: 0px;
+            }
+
+            .header_wrap {
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    // Box Title ===========================
+    .box_wrap {
+        &-title {
+            font-size: 34px;
+        }
+    }
+
+    // Service =================================
+    .service {
+        &::after {
+            width: 380px;
+            height: 380px;
+            top: -30px;
+        }
+
+        &_box {
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+            justify-content: center;
+
+            &-item {
+                width: calc(50% - 122px);
+                margin-bottom: 100px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .about_video {
+            .project_box-item-2 {
+                height: 450px !important;
+            }
+        }
+    }
+
+    // Project ===============================
+    .project {
+        &_box {
+            min-height: 490px;
+
+            &-item {
+                height: 270px !important;
+                margin: 0;
+
+                &.slick-current {
+                    height: 450px !important;
+                }
+
+                .play_btn {
+                    width: 80px;
+                    height: 80px;
+
+                    &::before {
+                        width: 20px;
+                        height: 20px;
+                    }
+                }
+
+                &-info {
+                    &-title {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .slick-next,
+            .slick-prev {
+                display: none !important;
+            }
+
+            .slick-dots {
+                bottom: -30px;
+            }
+        }
+    }
+
+    // Animation =============================
+    .animation {
+        &::after {
+            width: 380px;
+            height: 380px;
+        }
+    }
+
+    // Banner =================================
+    .banner {
+        &:before {
+            width: 200px;
+            height: 200px;
+        }
+
+        &_box {
+            padding-bottom: 50px;
+
+            .slick-next {
+                right: 43%;
+                bottom: -40px;
+                top: unset;
+                transform: translate(0, 0);
+            }
+
+            .slick-prev {
+                left: 43%;
+                bottom: -40px;
+                top: unset;
+                transform: translate(0, 0);
+            }
+        }
+    }
+
+    // News ==================================
+    .news {
+        &::after {
+            width: 380px;
+            height: 380px;
+        }
+
+        .slick-arrow {
+            display: none !important;
+        }
+
+        &_slider {
+
+            &-item {
+                height: auto !important;
+            }
+        }
+
+        &_box {
+            flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            -moz-flex-wrap: wrap;
+            -o-flex-wrap: wrap;
+            -webkit-flex-wrap: wrap;
+
+            &-item {
+                width: calc(50% - 40px);
+                margin-bottom: 50px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+
+                &-photo {
+                    height: 270px;
+                }
+            }
+        }
+    }
+
+    .pt100 {
+        padding-top: 130px;
+    }
+
+    // Clients ============================
+    .client {
+        &_box {
+            &-item {
+                width: calc(33.33% - 42px);
+            }
+        }
+    }
+
+    // Footer =========================
+    .footer {
+        &::before {
+            display: none;
+        }
+
+        &::after {
+            width: 280px;
+            height: 280px;
+            top: -40px;
+        }
+    }
+
+    // Post ===========================
+    .post {
+        &_info {
+            &-photo {
+                height: 420px;
+            }
+        }
+    }
+
+}
+
+@include md-xsm {
+
+    // Hero =================
+    .hero {
+        .slick-list {
+            height: 100vh;
+        }
+
+        &_slider {
+            &-item {
+                &-info {
+                    &-title {
+                        font-size: 20px;
+                    }
+                }
+
+                &-img {
+                    height: 100vh;
+                }
+            }
+        }
+    }
+
+    // Services ======================
+    .service {
+        &::before {
+            width: 170px;
+            height: 170px;
+        }
+
+        &::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        &_box {
+            margin: 100px 0 0 0;
+
+            &-item {
+                width: 95%;
+                margin: 0 0 100px 0;
+            }
+        }
+
+        .about_video {
+            .project_box-item-2 {
+                height: 350px !important;
+            }
+        }
+    }
+
+    // Projects ===========================
+    .project {
+        &::before {
+            width: 200px;
+            height: 200px;
+        }
+
+        &::after {
+            width: 300px;
+            height: 300px;
+            bottom: -130px;
+        }
+
+        &_box {
+            &-item {
+                height: auto !important;
+
+            }
+        }
+    }
+
+    // Banner ==============================
+    .banner {
+        &_box {
+            .hero_slider {
+                &-item {
+                    &-info {
+                        &-inner {
+                            padding: 40px;
+                        }
+
+                        &-title {
+                            font-size: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    // News ===================================
+    .news {
+        &::before {
+            width: 170px;
+            height: 170px;
+        }
+
+        &::after {
+            width: 200px;
+            height: 200px;
+        }
+
+        &_box {
+            justify-content: center;
+
+            &-item {
+                width: 85%;
+                margin: 0 0 50px 0;
+            }
+        }
+
+        .pagination {
+            &_input {
+                width: 75px;
+            }
+
+            .btn {
+                width: 10px;
+                height: 20px;
+            }
+        }
+    }
+
+    // Banner =========================
+    .banner {
+        &_wrap {
+            &::before {
+                display: none;
+            }
+        }
+
+        &_box {
+            .slick-prev {
+                left: 35%;
+            }
+
+            .slick-next {
+                right: 35%;
+            }
+
+            .hero_slider-item-info {
+                &-inner {
+                    &:before {
+                        width: 100px;
+                        height: 100px;
+                    }
+
+                    &:after {
+                        width: 100px;
+                        height: 100px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Client =============================
+    .client {
+        &_box {
+            &-item {
+                width: calc(50% - 42px);
+            }
+        }
+    }
+
+    // Footer =====================
+    .footer {
+        &::after {
+            width: 170px;
+            height: 170px;
+        }
+
+        &_box {
+            flex-direction: column-reverse;
+            -ms-flex-direction: column-reverse;
+            -moz-flex-direction: column-reverse;
+
+            &-col {
+                margin-bottom: 30px;
+                width: 100%;
+
+                &:last-child {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: flex-end;
+                }
+            }
+        }
+
+        &_logo {
+            display: none;
+        }
+    }
+
+    // Post ===========================
+    .post {
+        &_info {
+            &-photo {
+                height: 300px;
+            }
+
+            &-title {
+                font-size: 20px;
+            }
+
+            &-row {
+                margin: 15px 0 20px;
+            }
+
+            &-date {
+                font-size: 16px;
+                margin: 0px 30px 0px;
+
+                &-icon {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+
+            &-review {
+                font-size: 16px;
+
+                &-icon {
+                    width: 25px;
+                    height: 25px;
+                }
+            }
+        }
+    }
+
+}
+
+@include md-sm {
+    .auto_container {
+        padding: 0 20px;
+    }
+
+    // Header ==============
+    .header {
+        .navs_list {
+            padding-top: 30px;
+            height: calc(100% - 30px);
+
+            &-link {
+                padding: 20px 0;
+                font-size: 18px;
+            }
+        }
+
+        &.p-head {
+            &::before {
+                display: none;
+            }
+        }
+    }
+
+    // Box ===============
+    .box {
+        &_wrap {
+            &-title {
+                font-size: 22px;
+            }
+        }
+    }
+
+    // Project =======================
+    .project {
+        &_box {
+            &-item {
+                &-info {
+                    &-title {
+                        font-size: 16px;
+                    }
+                }
+
+                &.slick-current {
+                    height: 400px !important;
+                }
+            }
+        }
+    }
+
+    // Client ===================
+    .client {
+        &_box {
+            justify-content: center;
+
+            &-item {
+                width: 70%;
+                margin: 0 0 20px 0;
+            }
+        }
+    }
+
+    // News =====================
+    .news {
+        &_box {
+            &-item {
+                &-photo {
+                    height: 245px;
+                }
+            }
+        }
+    }
+
+}

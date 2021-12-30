@@ -1,0 +1,4 @@
+title: ServiceController
+modelClass: Atash\Yoda\Models\Service
+toolbar:
+    buttons: reorder_toolbar

@@ -1,0 +1,67 @@
+description = "project"
+==
+<?php
+use Atash\Yoda\Models\Project;
+
+function onStart()
+{
+    $this['data'] = Project::orderBy('id', 'asc')->get();
+}
+?>
+==
+<!-- Projects section  ======================= -->
+    <section class="project" id="projects">
+        <div class="auto_container">
+            <div class="project_wrap">
+                <div class="box_wrap ">
+                    <div class="box_wrap-inner gold">
+                        <p class="box_wrap-suptitle">
+                            Portfelimize göz aýlaň
+                        </p>
+                        <h1 class="box_wrap-title">
+                            TASLAMALARYMYZ
+                        </h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="project_box">
+
+            {% for post in data %}
+            <div class="project_box-item">
+                <div class="play_btn"></div>
+                <div class="project_box-item-video">
+                    <iframe class="youtube-video" width="560" height="315"
+                        src="{{ post.url }}?enablejsapi=1&version=3&playerapiid=ytplayer"
+                        modestbranding="0" controls="0" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                </div>
+
+                <div class="project_box-item-info">
+                    <h3 class="project_box-item-info-title">
+                        {{ post.title }}
+                    </h3>
+                    <p class="project_box-item-info-time">
+                        <span>
+                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <g opacity="0.5">
+                                    <path
+                                        d="M7 0C3.14008 0 0 3.14008 0 7C0 10.8599 3.14008 14 7 14C10.8599 14 14 10.8599 14 7C14 3.14008 10.8599 0 7 0ZM7 12.8333C3.7835 12.8333 1.16667 10.2165 1.16667 7C1.16667 3.7835 3.7835 1.16667 7 1.16667C10.2165 1.16667 12.8333 3.7835 12.8333 7C12.8333 10.2165 10.2165 12.8333 7 12.8333Z"
+                                        fill="white" />
+                                    <path
+                                        d="M10.5 6.41675H7.58335V3.50008C7.58335 3.1775 7.3226 2.91675 7.00002 2.91675C6.67744 2.91675 6.41669 3.1775 6.41669 3.50008V7.00008C6.41669 7.32266 6.67744 7.58341 7.00002 7.58341H10.5C10.8226 7.58341 11.0834 7.32266 11.0834 7.00008C11.0834 6.6775 10.8226 6.41675 10.5 6.41675Z"
+                                        fill="white" />
+                                </g>
+                            </svg>
+                        </span>
+                        06 min
+                    </p>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </section>
+    <!-- Projects section end ==================== -->

@@ -1,0 +1,20 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    text:
+        label: Text
+        size: large
+        span: right
+        type: textarea
+    image:
+        label: Image
+        mode: image
+        fileTypes: svg
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: auto
+        type: fileupload

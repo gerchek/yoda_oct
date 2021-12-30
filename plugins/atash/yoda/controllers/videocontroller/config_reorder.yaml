@@ -1,0 +1,4 @@
+title: VideoController
+modelClass: Atash\Yoda\Models\Video
+toolbar:
+    buttons: reorder_toolbar

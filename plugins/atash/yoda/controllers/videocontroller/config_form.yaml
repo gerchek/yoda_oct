@@ -1,0 +1,10 @@
+name: VideoController
+form: $/atash/yoda/models/video/fields.yaml
+modelClass: Atash\Yoda\Models\Video
+defaultRedirect: atash/yoda/videocontroller
+create:
+    redirect: 'atash/yoda/videocontroller/update/:id'
+    redirectClose: atash/yoda/videocontroller
+update:
+    redirect: atash/yoda/videocontroller
+    redirectClose: atash/yoda/videocontroller

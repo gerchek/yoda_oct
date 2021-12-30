@@ -1,0 +1,36 @@
+plugin:
+    name: 'atash.yoda::lang.plugin.name'
+    description: 'atash.yoda::lang.plugin.description'
+    author: Atash
+    icon: oc-icon-briefcase
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Video
+        url: atash/yoda/videocontroller
+        icon: icon-video-camera
+        sideMenu:
+            side-menu-item:
+                label: Service
+                url: atash/yoda/servicecontroller
+                icon: icon-sitemap
+            side-menu-item2:
+                label: Project
+                url: atash/yoda/projectcontroller
+                icon: icon-youtube-play
+            side-menu-item3:
+                label: Animation
+                url: atash/yoda/animationcontroller
+                icon: icon-image
+            side-menu-item4:
+                label: Sitata
+                url: atash/yoda/sitatacontroller
+                icon: icon-th-list
+            side-menu-item5:
+                label: News
+                url: atash/yoda/newscontroller
+                icon: icon-newspaper-o
+            side-menu-item6:
+                label: Client
+                url: atash/yoda/clientcontroller
+                icon: icon-street-view

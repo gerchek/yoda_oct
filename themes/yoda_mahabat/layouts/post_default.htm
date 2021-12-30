@@ -1,0 +1,78 @@
+description = "post_default"
+==
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ 'assets/css/jquery.fancybox.min.css'|theme }}">
+    <link rel="stylesheet" href="{{ 'assets/css/main.css'|theme }}">
+    <title>Yoda</title>
+</head>
+
+<body>
+
+<!-- Header ============================ -->
+    <header class="header p-head">
+        <div class="auto_container">
+            <div class="header_wrap">
+                <a href="{{ 'index' | page }}" class="logo">
+                    <img src="{{ 'assets/images/logo.png'|theme }}" alt="logo">
+                </a>
+                <nav class="navs">
+                    <ul class="navs_list">
+                        <li><a href="#about" class="navs_list-link">Biz barada</a></li>
+                        <li><a href="#service" class="navs_list-link">Hyzmatlarymyz</a></li>
+                        <li><a href="#projects" class="navs_list-link">Portfolio</a></li>
+                        <li><a href="#footer" class="navs_list-link">Habarlaşmak</a></li>
+                        <li><a href="{{ 'news' | page }}" class="navs_list-link">Täzelikler</a></li>
+                        <li class="lang">
+                            <div class="lang_box">
+                                <div class="lang_box-icon">
+                                    <img src="{{ 'assets/images/svg/globus.svg'|theme }}" alt="lang_icon">
+                                </div>
+                                <h3 class="current_lang">
+                                    TKM
+                                </h3>
+                                <div class="drop_lang">
+                                    <a href="#" class="drop_lang-item">
+                                        RU
+                                    </a>
+                                    <a href="#" class="drop_lang-item">
+                                        EN
+                                    </a>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header end ======================== -->
+
+{% page %}
+
+{% partial 'footer' %}
+
+
+<!-- <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/slick.min.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/jquery.fancybox.min.js"></script>
+    <script src="assets/js/main.js"></script> -->
+    
+    <script src="{{ ['assets/js/jquery.js','assets/js/slick.min.js','assets/js/slider.js','assets/js/wow.min.js','assets/js/jquery.fancybox.min.js','assets/js/main.js']|theme }}"></script>
+{% framework extras %}
+{% scripts %}
+
+    
+</body>
+
+</html>

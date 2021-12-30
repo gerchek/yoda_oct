@@ -1,0 +1,40 @@
+description = "banner"
+==
+<?php
+use Atash\Yoda\Models\Banner;
+
+function onStart()
+{
+    $this['data'] = Banner::orderBy('id', 'asc')->get();
+}
+?>
+==
+<!-- Banner section ======================== -->
+    <section class="banner">
+        <div class="auto_container">
+            <div class="banner_wrap">
+                <div class="banner_box">
+
+                    {% for post in data %}
+                    <div class="banner_box-item">
+                        <div class="hero_slider-item-info">
+                            <div class="hero_slider-item-info-inner">
+                                <p class="hero_slider-item-info-suptitle">
+                                    Günüň sitatasy
+                                </p>
+                                <h1 class="hero_slider-item-info-title">
+                                    "{{ post.text }}"
+                                </h1>
+                                <p class="hero_slider-item-info-text">
+                                    - {{ post.name }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Banner section end ==================== -->

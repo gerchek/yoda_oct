@@ -1,0 +1,10 @@
+name: ClientController
+form: $/atash/yoda/models/client/fields.yaml
+modelClass: Atash\Yoda\Models\Client
+defaultRedirect: atash/yoda/clientcontroller
+create:
+    redirect: 'atash/yoda/clientcontroller/update/:id'
+    redirectClose: atash/yoda/clientcontroller
+update:
+    redirect: atash/yoda/clientcontroller
+    redirectClose: atash/yoda/clientcontroller

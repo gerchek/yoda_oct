@@ -1,0 +1,10 @@
+name: NewsController
+form: $/atash/yoda/models/news/fields.yaml
+modelClass: Atash\Yoda\Models\News
+defaultRedirect: atash/yoda/newscontroller
+create:
+    redirect: 'atash/yoda/newscontroller/update/:id'
+    redirectClose: atash/yoda/newscontroller
+update:
+    redirect: atash/yoda/newscontroller
+    redirectClose: atash/yoda/newscontroller

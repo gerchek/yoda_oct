@@ -1,0 +1,34 @@
+title = "index"
+url = "/"
+layout = "default"
+is_hidden = 0
+==
+<?php
+use Atash\Yoda\Models\Video;
+
+function onStart()
+{
+    $this['data'] = Video::where('id', 1)->first();
+}
+?>
+==
+<!-- Hero section ======================== -->
+    <section class="hero">
+        <div class="hero_wrap">
+            <div class="hero_main">
+                <video autoplay loop muted>
+                    <source src="/storage/app/media/{{ data.url_video }}" type="video/webm">
+                    <source src="/storage/app/media/{{ data.url_video }}" type="video/mp4">
+                    <source src="/storage/app/media/{{ data.url_video }}" type="video/ogg">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section end ==================== -->
+    {% partial 'service' %}
+    {% partial 'project' %}
+    {% partial 'animation' %}
+    {% partial 'banner' %}
+    {% partial 'news' %}
+    {% partial 'client' %}

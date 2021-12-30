@@ -1,0 +1,49 @@
+description = "client"
+==
+<?php
+use Atash\Yoda\Models\Client;
+
+function onStart()
+{
+    $this['data'] = Client::orderBy('id', 'asc')->get();
+}
+?>
+==
+<!-- Clients section ======================== -->
+    <section class="client">
+        <div class="auto_container">
+            <div class="client_wrap">
+                <div class="box_wrap right">
+                    <div class="box_wrap-inner">
+                        <p class="box_wrap-suptitle">
+                            Bize ynanýan
+                        </p>
+                        <h1 class="box_wrap-title">
+                            Müşderilerimiz
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="client_box">
+                    
+                    {% for post in data %}
+                    <div class="client_box-item">
+                        <div class="client_box-item-photo fancybox" href="{{ post.image.path }}"
+                            data-fancybox="images-preview-2" data-width="1500" data-height="1000">
+                            <img src="{{ post.image.path }}" alt="clients-img">
+                        </div>
+                        <div style="display: none;">
+                            {% for im in post.images %}
+                            <a href="{{ im.path }}" data-fancybox-arrows="true" data-arrows="true"
+                                data-fancybox="images-preview-2" data-width="1500" data-height="1000"
+                                data-thumb="{{ im.path }}"></a>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Clients section end ==================== -->

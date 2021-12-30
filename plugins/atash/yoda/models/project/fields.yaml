@@ -1,0 +1,10 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    url:
+        label: URL
+        size: small
+        span: left
+        type: textarea

@@ -1,0 +1,10 @@
+name: SitataController
+form: $/atash/yoda/models/banner/fields.yaml
+modelClass: Atash\Yoda\Models\Banner
+defaultRedirect: atash/yoda/sitatacontroller
+create:
+    redirect: 'atash/yoda/sitatacontroller/update/:id'
+    redirectClose: atash/yoda/sitatacontroller
+update:
+    redirect: atash/yoda/sitatacontroller
+    redirectClose: atash/yoda/sitatacontroller

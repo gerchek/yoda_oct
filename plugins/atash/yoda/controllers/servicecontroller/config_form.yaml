@@ -1,0 +1,10 @@
+name: ServiceController
+form: $/atash/yoda/models/service/fields.yaml
+modelClass: Atash\Yoda\Models\Service
+defaultRedirect: atash/yoda/servicecontroller
+create:
+    redirect: 'atash/yoda/servicecontroller/update/:id'
+    redirectClose: atash/yoda/servicecontroller
+update:
+    redirect: atash/yoda/servicecontroller
+    redirectClose: atash/yoda/servicecontroller

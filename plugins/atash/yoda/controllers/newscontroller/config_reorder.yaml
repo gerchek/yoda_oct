@@ -1,0 +1,4 @@
+title: NewsController
+modelClass: Atash\Yoda\Models\News
+toolbar:
+    buttons: reorder_toolbar

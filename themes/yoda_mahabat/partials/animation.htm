@@ -1,0 +1,44 @@
+description = "animation"
+==
+<?php
+use Atash\Yoda\Models\Animation;
+
+function onStart()
+{
+    $this['data'] = Animation::orderBy('id', 'asc')->get();
+}
+?>
+==
+<!-- Gif animation section ======================== -->
+    <section class="animation">
+        <div class="auto_container">
+            <div class="animation_wrap">
+                <div class="box_wrap right">
+                    <div class="box_wrap-inner">
+                        <p class="box_wrap-suptitle">
+                            Sekilli animasiyalar
+                        </p>
+                        <h1 class="box_wrap-title">
+                            Gif Şekilli animasiyalar
+                        </h1>
+                    </div>
+                </div>
+
+                <div class="animation_box">
+                    {% for post in data %}
+
+                    <div class="animation_box-item w50">
+                        <div class="animation_box-item-gif">
+                            <img src="{{ post.image.path }}" alt="gif">
+                        </div>
+                        <h2 class="animation_box-item-title">
+                            {{ post.title }}
+                        </h2>
+                    </div>
+
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Gif animation section end ==================== -->

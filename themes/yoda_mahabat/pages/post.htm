@@ -1,0 +1,51 @@
+title = "post"
+url = "/post/:post_id"
+layout = "post_default"
+is_hidden = 0
+==
+<?php
+function onStart()
+{
+    $post_id = $this->param('post_id');
+  $this['post'] = Atash\Yoda\Models\News::find($post_id);
+  
+  
+}
+?>
+==
+<!-- Post ============================== -->
+    <section class="post">
+        <div class="auto_container">
+            <div class="post_wrap">
+                <div class="post_info">
+                    <div class="post_info-photo">
+                        <img src="/storage/app/media/{{ post.image }}" alt="post-photo">
+                    </div>
+                    <h1 class="post_info-title">
+                        {{ post.title }}
+                    </h1>
+                    <div class="post_info-row">
+                        <!-- <div class="post_info-date">
+                            <spna class="post_info-date-icon">
+                                <img src="assets/images/svg/calendar.svg" alt="calendar-icon">
+                            </spna>
+                            24.11.2021
+                        </div>
+
+                        <div class="post_info-review">
+                            <span class="post_info-review-icon">
+                                <img src="assets/images/svg/eye.svg" alt="review-icon">
+                            </span>
+                            120
+                        </div> -->
+                    </div>
+                    <div class="post_info-text">
+                        {{ post.text|raw }}
+                    </div>
+                
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Post end ========================== -->

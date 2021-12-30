@@ -1,0 +1,14 @@
+fields:
+    title:
+        label: Title
+        span: auto
+        type: text
+    image:
+        label: Gif
+        mode: image
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: left
+        type: fileupload

@@ -1,0 +1,10 @@
+name: ProjectController
+form: $/atash/yoda/models/project/fields.yaml
+modelClass: Atash\Yoda\Models\Project
+defaultRedirect: atash/yoda/projectcontroller
+create:
+    redirect: 'atash/yoda/projectcontroller/update/:id'
+    redirectClose: atash/yoda/projectcontroller
+update:
+    redirect: atash/yoda/projectcontroller
+    redirectClose: atash/yoda/projectcontroller
